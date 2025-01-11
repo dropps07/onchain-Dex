@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-gradient-green {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500;
+  }
+
+  .animate-gradient {
+    animation: animateGradient 5s ease infinite;
+    background-size: 200% auto;@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    
+    @layer base {
+      body {
+        @apply bg-gray-100 text-gray-900;
+      }
+    }
+    
+    @layer components {
+      .btn-primary {
+        @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+        transition: background-color 0.3s;
+      }
+    
+      .btn-primary:hover {
+        @apply bg-blue-700;
+      }
+    }
+    
+    @layer utilities {
+      .text-gradient-blue {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500;
+      }
+    
+      .animate-gradient {
+        animation: animateGradient 5s ease infinite;
+        background-size: 200% auto;
+      }
+    
+      @keyframes animateGradient {
+        0% { background-position: 0% center; }
+        50% { background-position: 100% center; }
+        100% { background-position: 0% center; }
+      }
+    }
+  }
+
+  @keyframes animateGradient {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+  }
+}
